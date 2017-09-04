@@ -71,6 +71,22 @@ function stateIncomeCAJointFile(amount) {
   return tax;
 }
 
+// Net Investment Income Tax NIIT
+//
+// Effective Jan. 1, 2013, individual taxpayers are liable for a 3.8 percent Net Investment Income Tax on the lesser of their net investment income, or the amount by which their modified adjusted gross income exceeds the statutory threshold amount based on their filing status.
+//
+// The statutory threshold amounts are:
+//
+// Married filing jointly — $250,000,
+// Married filing separately — $125,000,
+// Single or head of household — $200,000, or
+// Qualifying widow(er) with a child — $250,000.
+
+function federalNetInvestmentIncomeTaxMarriedFilingJointly(agi, netInvestmentIncome) {
+  // Now compute the NIIT
+  return Math.min(netInvestmentIncome, agi - 250000);
+}
+
 function federalCapitalGainsMarriedFilingJointly(ordinaryIncome, capGains) {
 
   // Fill up brackets first with ordinary income
