@@ -1,0 +1,10 @@
+{
+  "name": "gas-financial",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jest-cli": "^20.0.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
